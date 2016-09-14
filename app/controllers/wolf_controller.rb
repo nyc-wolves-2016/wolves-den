@@ -8,5 +8,6 @@ get '/wolves' do
 end
 
 get '/wolves/:id' do
+  @wolf = Wolf.find(params[:id])
   erb :'wolves/show'
 end
