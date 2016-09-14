@@ -6,3 +6,7 @@ get '/wolves' do
   @wolves = Wolf.all
   erb :'wolves/index'
 end
+
+get '/wolves/:id' do
+  erb :'wolves/show'
+end
