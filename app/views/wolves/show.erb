@@ -1,3 +1,3 @@
 <h1><%= @wolf.name %></h1>
 
-<p><%= @wolf.description %></p>
+<%= erb :'wolves/_description', locals: {wolf: @wolf} %>
