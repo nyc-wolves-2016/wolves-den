@@ -1,6 +1,6 @@
 <h1>These are the wolves or something!</h1>
 <ul>
 <% @wolves.each do |wolf| %>
-	<li><%= wolf.name %></li>
+	<li><a href="/wolves/<%= wolf.id %>"><%= wolf.name %></a></li>
 <% end %>
 </ul>
