@@ -13,7 +13,11 @@ end
 
 get '/wolves/:id' do
   @wolf = Wolf.find(params[:id])
-  erb :'wolves/show'
+  if request.xhr?
+    erb :'wolves/_description', locals: {wolf: @wolf}, layout: false
+  else 
+    erb :'wolves/show'
+  end
 end
 
 post '/wolves' do
